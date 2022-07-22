@@ -22,12 +22,26 @@ public class UserRegistration {
 		System.out.println("First name pattern matching :- " + matcher.matches());
 	}
 	
+	public static void lastNameValidation() {
+		System.out.print("Enter Last Name :- ");
+		String last_name = input.nextLine();
+		
+		String lastNameRegex = "^[A-Z][A-Z a-z]*$";           
+		
+		Pattern pattern = Pattern.compile(lastNameRegex);
+		
+		Matcher matcher = pattern.matcher(last_name);
+		
+		System.out.println("Last name pattern matching :- " + matcher.matches());
+	}
+	
 	
 	public static void main(String[] args) {
 		
 		System.out.println(" WELCOME TO USER REGISTRATION PROGRAM ");
 	
 		firstNameValidation();
+		lastNameValidation();
 
 	
 		
