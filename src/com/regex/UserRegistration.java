@@ -61,6 +61,20 @@ public class UserRegistration {
 		System.out.println("Contact pattern matching :- " + matcher.matches());
 	}
 	
+	public static void passwordValidation() {
+		System.out.println("Enter a password with 8 minimum characters :- ");
+		String password = input.nextLine();
+		
+		String passwordRegex = "^[A-Za-z0-9]{8,}$";   
+		
+		Pattern pattern = Pattern.compile(passwordRegex);
+		
+		Matcher matcher = pattern.matcher(password);
+		
+		System.out.println("Password Validation :- " + matcher.matches());
+	
+	} 
+	
 	
 	public static void main(String[] args) {
 		
@@ -70,6 +84,7 @@ public class UserRegistration {
 		lastNameValidation();
 		emailValidation();
 		mobileValidation();
+		passwordValidation();
 		
 }
 }
