@@ -48,6 +48,19 @@ public class UserRegistration {
 		System.out.println("Email pattern matching :- " + matcher.matches());
 	}
 	
+	public static void mobileValidation() {
+		System.out.print("Enter Mobile Number :- ");
+		String num = input.nextLine();
+		
+		String numRegex = "^[0-9]{2}(\\s){1}[0-9]{10}$";           
+		
+		Pattern pattern = Pattern.compile(numRegex);
+		
+		Matcher matcher = pattern.matcher(num);
+		
+		System.out.println("Contact pattern matching :- " + matcher.matches());
+	}
+	
 	
 	public static void main(String[] args) {
 		
@@ -56,6 +69,7 @@ public class UserRegistration {
 		firstNameValidation();
 		lastNameValidation();
 		emailValidation();
+		mobileValidation();
 		
 }
 }
