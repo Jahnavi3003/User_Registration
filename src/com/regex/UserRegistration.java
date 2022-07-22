@@ -35,6 +35,19 @@ public class UserRegistration {
 		System.out.println("Last name pattern matching :- " + matcher.matches());
 	}
 	
+	public static void emailValidation() {
+		System.out.print("Enter Email :- ");
+		String mail = input.nextLine();
+		
+		String mailRegex = "^[a-z]*(.)[a-z]*(.)@[a-z]*(.)[a-z]*$";           
+		
+		Pattern pattern = Pattern.compile(mailRegex);
+		
+		Matcher matcher = pattern.matcher(mail);
+		
+		System.out.println("Email pattern matching :- " + matcher.matches());
+	}
+	
 	
 	public static void main(String[] args) {
 		
@@ -42,8 +55,7 @@ public class UserRegistration {
 	
 		firstNameValidation();
 		lastNameValidation();
-
-	
+		emailValidation();
 		
 }
 }
