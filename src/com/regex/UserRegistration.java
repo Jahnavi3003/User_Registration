@@ -2,7 +2,10 @@ package com.regex;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
+import com.regex.IEmailValidation;
+import com.regex.IFirstNameValidation;
+import com.regex.ILastNameValidation;
+import com.regex.IPasswordValidation;
 public class UserRegistration {
 	
 	public boolean firstNameValidation(String first_name) throws UserRegistrationException {
